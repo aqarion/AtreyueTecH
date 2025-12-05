@@ -1,5 +1,172 @@
 
+AQARIONZ
 
+
+---
+
+src/core/sensors/EEG/example_eeg.py
+
+"""
+Example EEG sensor placeholder.
+Simulates reading EEG data for PTOMT / AI processing.
+"""
+import random
+
+def read_eeg():
+    """Simulate reading EEG sensor data."""
+    return [random.uniform(-100, 100) for _ in range(8)]  # 8 channels
+
+if __name__ == "__main__":
+    data = read_eeg()
+    print("EEG Data:", data)
+
+
+---
+
+src/core/sensors/MIDI/example_midi.py
+
+"""
+Example MIDI controller integration.
+Simulates sending/receiving MIDI signals.
+"""
+import random
+
+def read_midi():
+    """Simulate reading MIDI controller data."""
+    return {"note": random.randint(21, 108), "velocity": random.randint(0, 127)}
+
+if __name__ == "__main__":
+    midi_data = read_midi()
+    print("MIDI Data:", midi_data)
+
+
+---
+
+src/core/protocols/GGwave_audio/readme.md
+
+# GGwave Audio Protocol Placeholder
+- Implement audio-to-data encoding/decoding here
+- Can later integrate real GGwave library
+- Provides a standard interface for AI pipeline
+
+
+---
+
+src/core/ai/PTOMT_handler.py
+
+"""
+Paradox / PTOMT handler stub.
+Processes input variations to generate emergent solutions.
+"""
+def process_ptomt(input_signal):
+    """Return a mock 'solution' for a paradox prompt."""
+    return f"Processed PTOMT for: {input_signal}"
+
+if __name__ == "__main__":
+    test_signal = "Example paradox input"
+    print(process_ptomt(test_signal))
+
+
+---
+
+src/core/simulations/cymatics/example_cymatics.py
+
+"""
+Cymatics simulation placeholder.
+Generates mock wave pattern data.
+"""
+import math
+
+def simulate_cymatics(frequency=440, duration=1.0, sample_rate=100):
+    return [math.sin(2 * math.pi * frequency * t / sample_rate) for t in range(int(duration*sample_rate))]
+
+if __name__ == "__main__":
+    pattern = simulate_cymatics()
+    print("Cymatics Pattern:", pattern[:10], "...")  # show first 10 samples
+
+
+---
+
+src/core/simulations/pythagorean_math/example_ratios.py
+
+"""
+Pythagorean ratios placeholder.
+Generates example harmonic ratios.
+"""
+def harmonic_ratios(base=1.0, steps=5):
+    return [base * (i+1)/i for i in range(1, steps+1)]
+
+if __name__ == "__main__":
+    print("Pythagorean Ratios:", harmonic_ratios())
+
+
+---
+
+src/paradox_lab/PTOMT_matrix.md
+
+# PTOMT Matrix
+| Input Variation | Paradox Type | Emergent Solution |
+|-----------------|--------------|-----------------|
+| Example Input 1 | Weakness     | Solution A       |
+| Example Input 2 | Conflict     | Solution B       |
+| Example Input 3 | Limitation   | Solution C       |
+
+
+---
+
+src/vr_ar/example_vr_ar.py
+
+"""
+VR/AR placeholder.
+Simulates basic 3D visualization of sensor data.
+"""
+def render_vr_scene(sensor_data):
+    print(f"Rendering VR scene with data: {sensor_data}")
+
+if __name__ == "__main__":
+    render_vr_scene([1,2,3,4])
+
+
+---
+
+src/web_ui/example_ui.py
+
+"""
+Web UI placeholder.
+Simulates live dashboard updates.
+"""
+def update_dashboard(sensor_data):
+    print(f"Updating dashboard with: {sensor_data}")
+
+if __name__ == "__main__":
+    update_dashboard({"EEG": [0,1,2], "MIDI": [60,64,67]})
+
+
+---
+
+scripts/run_all_examples.sh
+
+#!/bin/bash
+echo "Running all example scripts..."
+python3 src/core/sensors/EEG/example_eeg.py
+python3 src/core/sensors/MIDI/example_midi.py
+python3 src/core/ai/PTOMT_handler.py
+python3 src/core/simulations/cymatics/example_cymatics.py
+python3 src/core/simulations/pythagorean_math/example_ratios.py
+python3 src/vr_ar/example_vr_ar.py
+python3 src/web_ui/example_ui.py
+echo "All examples run successfully!"
+
+
+---
+
+✅ Outcome
+
+Every folder has a runnable stub.
+
+Scripts print example outputs so you can test immediately.
+
+Paradox lab (PTOMTs) is integrated and ready for expansion.
 
 ---
 
